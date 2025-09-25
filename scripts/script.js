@@ -11,3 +11,5 @@ headerLink.forEach(link => {
         if (headerLinks.classList.contains('active')) headerLinks.classList.toggle('active');
     })
 })
+
+new Swiper('.swiper-container');
