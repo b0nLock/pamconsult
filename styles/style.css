@@ -28,7 +28,7 @@ body {
 .header {
     background: linear-gradient(to right, #53269D, #6D31D0);
     padding: 20px 0;
-    position: sticky;
+    position: fixed;
     z-index: 10;
     width: 100%;
 }
@@ -89,28 +89,90 @@ body {
 
 .content {
     overflow: hidden;
+    padding-top: 110px;
+}
+
+.content__intro {
+    height: 100vh;
 }
 
 .intro__slide {
     width: 100vw;
-    height: 100vh;
-    background-position: center;
-    background: url("../images/picture_home1.png") no-repeat;
+    height: 100%;
+    background: url("../images/picture_home1.png") 0 0 no-repeat;
     background-size: cover;
-    background-repeat: round;
+    background-position: top;
     color: white;
 }
 
+.intro__slide:nth-child(2) > .intro__background {
+    background: #ffffff;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+}
+
+.intro__slide:nth-child(3) > .intro__background {
+    height: 100%;
+    width: 100%;
+    background: #B7D6EF;
+    background: linear-gradient(90deg,rgba(183, 214, 239, 1) 0%, rgba(183, 214, 239, 0.6) 36%,
+     rgba(183, 214, 239, 0) 53%);
+}
+
 .intro__slide:nth-child(2) {
-    background: url("../images/offer2_image.png") no-repeat;
-    background-repeat: round;
+    background: url("../images/offer2_image.png") 0 0 no-repeat;
+    background-size: cover;
+    background-position: top;
     color: black;
 }
 .intro__slide:nth-child(3) {
-    background: url("../images/offer3_image.png") no-repeat;
-    background-repeat: round;
+    background: url("../images/offer3_image.png") 0 0 no-repeat;
+    background-size: cover;
+    background-position: top;
     color: black;
 }
+.intro__slide:nth-child(4) {
+    background: url("../images/business1.png") 0 0 no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.intro__slide:nth-child(5) {
+    background: url("../images/offer5_image.png") 0 0 no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: black;
+}
+.intro__slide:nth-child(6) {
+    background: url("../images/offer6_image.png") 0 0 no-repeat;
+    background-size: cover;
+    background-position: top right;
+}
+
+.intro__slide:nth-child(4) > .intro__background {
+    height: 100%;
+    width: 100%;
+    background: #746045;
+    background: linear-gradient(90deg,#746045 0%,
+     #74604500 53%);
+}
+
+.intro__slide:nth-child(5) > .intro__background {
+    height: 100%;
+    width: 100%;
+    background: #EAECF1;
+    background: linear-gradient(90deg,#EAECF1 0%, #eaecf1a2 36%,
+     #eaecf100 53%);
+}
+
+.intro__slide:nth-child(6) > .intro__background {
+    height: 100%;
+    width: 100%;
+    background: #8EA1BD;
+    background: linear-gradient(90deg,#8EA1BD 0%,
+     #8ea1bd00 53%);
+}
+
 
 .intro__description {
     padding-top: 140px;
@@ -124,6 +186,7 @@ body {
     display: flex;
     align-items: center;
     gap: 22px;
+    flex-wrap: wrap;
 }
 
 .intro__tags--name {
@@ -147,6 +210,18 @@ body {
     margin-right: -12px;
     top: 25%;
     right: 0;
+}
+
+.intro__slide:nth-child(2) .intro__tags--name:not(:last-child)::after {
+    background-color: black;
+}
+
+.intro__slide:nth-child(3) .intro__tags--name:not(:last-child)::after {
+    background-color: black;
+}
+
+.intro__slide:nth-child(5) .intro__tags--name:not(:last-child)::after {
+    background-color: black;
 }
 
 .intro__info {
@@ -175,13 +250,40 @@ body {
 .intro__popular {
     padding-top: 78px;
     padding-bottom: 60px;
+    max-width: 85%;
+    margin: auto;
+    position: relative;
+    z-index: 5;
 }
 
 .intro__popular--title {
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
-    /* color: white; */
+}
+
+.popular__list {
+    padding: 16px 0;
+    /* display: flex;
+    flex-shrink: 1 !important;
+    align-items: center; */
+    min-width: 0;
+    gap: 40px;
+}
+
+.popular__card {
+    background-color: white;
+    width: max-content !important;
+    padding: 10px 7.5px;
+    border-radius: 12px;
+}
+
+.popular__card--name {
+    color: #828CDE;
+    padding-top: 10px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
 }
 
 
@@ -194,10 +296,9 @@ body {
     }
     .active {
         display: flex;
-        position: fixed;
+        position: absolute;
         flex-direction: column;
         background-color: white;
-        border: black 1px solid;
         top: 120px;
         right: 0;
         padding: 16px 30px;
@@ -211,7 +312,22 @@ body {
     .header__burger {
         display: flex;
     }
+    .intro__slide:nth-child(4) > .intro__background {
+        background: linear-gradient(180deg,#746045 0%,
+        #74604500 53%);
+    }
+
+    .intro__slide:nth-child(5) > .intro__background {
+        background: linear-gradient(180deg,#EAECF1 0%, #eaecf1a2 36%,
+        #eaecf100 53%);
+    }
+
+    .intro__slide:nth-child(6) > .intro__background {
+        background: linear-gradient(180deg,#8EA1BD 0%,
+        #8ea1bd00 53%);
+    }
 }
+
 
 @media (max-width: 1024px) {
     .container {
@@ -220,14 +336,48 @@ body {
     .header__icon--image {
         width: 100px;
     }
+    .intro__text {
+        width: 70%;
+    }
+    .popular__list {
+        gap: 20px;
+    }
+    .intro__slide:nth-child(2) > .intro__background {
+        background: linear-gradient(180deg,rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .intro__slide:nth-child(3) > .intro__background {
+        background: linear-gradient(180deg,rgba(183, 214, 239, 1) 0%, rgba(183, 214, 239, 0.6) 36%,
+        rgba(183, 214, 239, 0) 53%);
+    }
+
+    
 }
 
 @media (max-width: 767px) {
     .container {
-        margin: 0 50px;
+        margin: 0 40px;
     }
     .header__try {
         display: none;
+    }
+    .intro__description {
+        padding-top: 40px;
+        align-items: center;
+    }
+    .intro__tags {
+        justify-content: center;
+    }
+    .intro__slide:nth-child(1) > .intro__background {
+        height: 100%;
+        width: 100%;
+        background: #B7D6EF;
+        background: linear-gradient(180deg,rgba(183, 214, 239, 1) 0%, rgba(183, 214, 239, 0.6) 36%,
+        rgba(183, 214, 239, 0) 53%);
+    }
+    .intro__text {
+        width: 90%;
+        text-align: center;
     }
 }
 

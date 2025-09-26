@@ -12,4 +12,20 @@ headerLink.forEach(link => {
     })
 })
 
-new Swiper('.swiper-container');
+new Swiper('.content__intro', {
+    direction: 'vertical',
+    allowTouchMove: false,
+    autoplay: {
+        delay: 10000
+    },
+});
+new Swiper('.intro__popular', {
+    breakpoints: {
+    300: {
+        slidesPerView: 2,
+    },
+    700: {
+        slidesPerView: 0,
+    }
+  }
+});
