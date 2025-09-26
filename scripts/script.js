@@ -13,7 +13,6 @@ headerLink.forEach(link => {
 })
 
 new Swiper('.content__intro', {
-    direction: 'vertical',
     allowTouchMove: false,
     autoplay: {
         delay: 10000
@@ -21,7 +20,15 @@ new Swiper('.content__intro', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+    },
+    breakpoints: {
+    300: {
+        direction: 'horizontal'
+    },
+    768: {
+        direction: 'vertical',
     }
+  }
 });
 new Swiper('.intro__popular', {
     breakpoints: {

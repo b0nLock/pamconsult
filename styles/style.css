@@ -397,6 +397,13 @@ body {
         width: 90%;
         text-align: center;
     }
+    .swiper-pagination {
+        right: 0 !important;
+        bottom: -100px !important;
+    }
+    .swiper-pagination-bullet {
+        margin: 0 10px !important;
+    }
 }
 
 
