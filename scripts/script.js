@@ -18,6 +18,10 @@ new Swiper('.content__intro', {
     autoplay: {
         delay: 10000
     },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    }
 });
 new Swiper('.intro__popular', {
     breakpoints: {

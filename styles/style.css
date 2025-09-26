@@ -173,10 +173,26 @@ body {
      #8ea1bd00 53%);
 }
 
+.swiper-pagination {
+    right: 50px !important;
+}
+
+.swiper-pagination-bullet {
+    border: white 2px solid;
+    background-color: transparent;
+    opacity: 1;
+    padding: 2px;
+    margin: 20px 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white;
+    scale: 1.5;
+}
+
 
 .intro__description {
     padding-top: 140px;
-    /* color: white; */
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -350,7 +366,9 @@ body {
         background: linear-gradient(180deg,rgba(183, 214, 239, 1) 0%, rgba(183, 214, 239, 0.6) 36%,
         rgba(183, 214, 239, 0) 53%);
     }
-
+    .swiper-pagination {
+        right: 30px !important;
+    }
     
 }
 
