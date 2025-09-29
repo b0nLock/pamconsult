@@ -14,9 +14,9 @@ headerLink.forEach(link => {
 
 new Swiper('.content__intro', {
     allowTouchMove: false,
-    autoplay: {
-        delay: 10000
-    },
+    // autoplay: {
+    //     delay: 10000
+    // },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
