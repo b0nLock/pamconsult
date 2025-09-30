@@ -93,12 +93,12 @@ body {
 }
 
 .content__about {
-    height: 100vh;
+    height: 102vh;
     overflow: hidden;
 }
 
 .content__intro {
-    height: 100vh;
+    height: 102vh;
 }
 
 .intro__slide {
@@ -559,6 +559,10 @@ body {
     text-align: center;
     width: 480px;
     opacity: 0;
+    -webkit-box-shadow: 7px 10px 17px -10px rgba(0,0,0,0.41); 
+    box-shadow: 7px 10px 17px -10px rgba(0,0,0,0.41);
+    margin-right: 10px;
+    padding-bottom: 23px;
 }
 
 .location__images {
@@ -580,7 +584,7 @@ body {
 
 .location__city--text {
     font-weight: 500;
-    padding-top: 10px;
+    padding: 10px 0;
     letter-spacing: 0.5px;
 }
 
