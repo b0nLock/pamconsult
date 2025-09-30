@@ -434,7 +434,6 @@ body {
     justify-content: space-between;
     align-items: center;
     color: #434364;
-    overflow: hidden;
     flex-wrap: wrap;
 }
 
@@ -457,8 +456,8 @@ body {
 }
 
 .location__map {
-    overflow: hidden;
     position: relative;
+    width: 100%;
 }
 
 .location__map img {
@@ -564,7 +563,7 @@ body {
     box-shadow: 7px 10px 17px -10px rgba(0,0,0,0.41);
     margin-right: 10px;
     padding-bottom: 23px;
-    margin-bottom: 23px;
+    /* margin-bottom: 23px; */
 }
 
 .location__images {
@@ -572,6 +571,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 13px;
+    padding: 13px 11px;
 }
 
 .location__city {
@@ -645,6 +645,8 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 20px;
+    -webkit-box-shadow: 7px 15px 17px -10px rgba(0,0,0,0.41); 
+    box-shadow: 7px 15px 17px -10px rgba(0,0,0,0.41);
 }
 
 .authors__card--list {
@@ -733,6 +735,7 @@ body {
     .location__action--subtitle::before {
         content: 'Tap on';
     }
+
     .location__list {
         flex-direction: column;
         align-items: center;
@@ -793,8 +796,28 @@ body {
     .reasons__info {
         width: 70%;
     }
+    .location__desc {
+        width: 100%;
+        margin: auto;
+    }
+    .location__action {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .location__action--title {
+        padding: 0;
+        margin: 0;
+    }
     .location__map {
-        scale: 0.7;
+        display: flex;
+        flex-direction: column;
+    }
+    .location__map--image {
+        scale: 0.5;
+        align-self: center;
     }
     .authors__info--title {
         text-align: center;
@@ -858,8 +881,24 @@ body {
         margin: 0px;
     }
     .location__desc {
-        width: 60%;
+        width: 90%;
         margin: auto;
+    }
+    .location__action {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .location__action--title {
+        padding: 0;
+        margin: 0;
+    }
+    .location__map--image {
+        scale: 0.5;
+        /* width: 460px;
+        margin: 0; */
     }
     .authors__info--title {
         text-align: start;
