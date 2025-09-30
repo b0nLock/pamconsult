@@ -435,6 +435,7 @@ body {
     align-items: center;
     color: #434364;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 
@@ -563,6 +564,7 @@ body {
     box-shadow: 7px 10px 17px -10px rgba(0,0,0,0.41);
     margin-right: 10px;
     padding-bottom: 23px;
+    margin-bottom: 23px;
 }
 
 .location__images {
@@ -588,6 +590,91 @@ body {
     letter-spacing: 0.5px;
 }
 
+.content__authors {
+    background: #828CDE;
+    background: linear-gradient(180deg,#828CDE 0%,
+        #6D31D0 100%);
+    padding: 39px 0;
+}
+
+.authors__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.authors__info {
+    color: white;
+    width: 40%;
+}
+
+.authors__info--title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.authors__info--title::after {
+    position: absolute;
+    content: '';
+    background-color: #FDBFA3;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    margin-left: -50%;
+    bottom: 0;
+}
+
+.authors__info--text {
+    padding: 10px 0;
+    letter-spacing: 0.5px;
+}
+.authors__info--text:last-of-type {
+    margin-bottom: 54px;
+}
+
+.authors__try {
+    -webkit-box-shadow: 7px 10px 17px -10px rgba(0,0,0,0.41); 
+    box-shadow: 7px 10px 17px -10px rgba(0,0,0,0.41);
+    width: max-content;
+}
+
+.authors__card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.authors__card--list {
+    display: flex;
+    justify-content: space-between;
+    color: #434364;
+}
+
+.authors__card--info {
+    display: flex;
+    flex-direction: column;
+}
+
+.authors__card--image {
+    width: 50%;
+}
+
+.authors__card--rank {
+    padding-top: 24px;
+    font-size: 20px;
+    color: #6D31D0;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    padding-bottom: 15px;
+}
+
+.authors__card--name {
+    letter-spacing: 0.5;
+    padding-bottom: 30px;
+}
 
 @media (max-width: 1280px) {
     .container {
@@ -651,6 +738,14 @@ body {
         align-items: center;
         text-align: center;
     }
+    .authors__list {
+        flex-direction: column;
+        align-items: start;
+        gap: 50px;
+    }
+    .authors__info {
+        width: 100%;
+    }
 }
 
 
@@ -700,6 +795,15 @@ body {
     }
     .location__map {
         scale: 0.7;
+    }
+    .authors__info--title {
+        text-align: center;
+    }
+    .authors__info--title::after {
+        margin-left: -25%;
+    }
+    .authors__card {
+        align-self: center;
     }
 }
 
@@ -757,7 +861,23 @@ body {
         width: 60%;
         margin: auto;
     }
-    
+    .authors__info--title {
+        text-align: start;
+    }
+    .authors__info--title::after {
+        margin-left: 0;
+        width: 70%;
+    }
+    .authors__card--list {
+        flex-direction: column;
+        text-align: center;
+    }
+    .authors__card--image {
+        width: 100%;
+    }
+    .authors__card--info > .authors__try {
+        align-self: center;
+    }
 }
 
 
