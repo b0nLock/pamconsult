@@ -321,6 +321,26 @@ body {
     z-index: 1;
 }
 
+.paradise__image:nth-child(1)::after {
+    width: 55%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    content: '';
+    right: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.paradise__image:nth-child(3)::after {
+    width: 55%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    content: '';
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
 .paradise__image:nth-child(1) {
     left: 0;
 }
@@ -337,10 +357,11 @@ body {
     width: 480px;
     position: relative;
     z-index: 2;
-    background: white;
+    background-color: white;
+    /* background: white;
     background: linear-gradient(90deg,rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 10%,
-     rgba(255, 255, 255, 1) 11%, rgba(255, 255, 255, 1) 89%, rgba(255, 255, 255, 0.5) 90%);
-    padding: 0 96px;
+     rgba(255, 255, 255, 1) 11%, rgba(255, 255, 255, 1) 89%, rgba(255, 255, 255, 0.5) 90%); */
+    padding: 0 70px;
 }
 
 .paradise__info--title {
@@ -404,6 +425,113 @@ body {
     padding-bottom: 4px;
 }
 
+.content__location {
+    padding: 80px 0;
+}
+
+.location__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #434364;
+}
+
+.location__action--title {
+    color: #6D31D0;
+    font-size: 28px;
+    font-weight: 600;
+}  
+
+.location__action--subtitle {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.location__action--subtitle::before {
+    content: 'Click your mouse over';
+}
+
+.location__map {
+    overflow: hidden;
+    position: relative;
+}
+
+.location__map img {
+    position: relative;
+}
+.location__map--button {
+    position: absolute;
+    z-index: 6;
+    font-weight: 500;
+}
+
+.location__paphos {
+    color: white;
+    background: url("../images/paphos_map_image.png") no-repeat;
+    background-size: auto;
+    padding: 80px;
+    background-position: left;
+    margin: auto;
+    left: 4px;
+    bottom: 44px;
+}
+
+.location__paphos::before {
+    content: 'PAPHOS';
+    margin-left: -40px;
+}
+
+.location__limassol {
+    color: white;
+    background: url("../images/limassol_map_image.png") no-repeat;
+    background-size: auto;
+    padding: 80px;
+    background-position: center bottom;
+    margin: auto;
+    left: 86px;
+    bottom: 7px;
+}
+
+.location__limassol::before {
+    content: 'LIMASSOL';
+}
+
+.location__larnaka {
+    color: #434364;
+    background: url("../images/larnaka_map_image.png") no-repeat;
+    background-size: auto;
+    padding: 75px 120px;
+    background-position: bottom;
+    margin: auto;
+    left: 248px;
+    bottom: 64px;
+}
+
+.location__larnaka::before {
+    content: 'LARNAKA';
+    margin-left: -50px;
+    position: absolute;
+}
+
+.location__nicosia {
+    color: #434364;
+    background: url("../images/nicosia_map_image.png") no-repeat;
+    background-size: auto;
+    padding: 75px 150px;
+    background-position: bottom;
+    margin: auto;
+    left: 90px;
+    bottom: 124px;
+}
+
+.location__nicosia::before {
+    content: 'NICOSIA';
+    margin-left: -30px;
+    position: absolute;
+}
+
 
 @media (max-width: 1280px) {
     .container {
@@ -443,6 +571,12 @@ body {
     .intro__slide:nth-child(6) > .intro__background {
         background: linear-gradient(180deg,#8EA1BD 0%,
         #8ea1bd00 53%);
+    }
+    .paradise__info {
+        padding: 0 20px;
+    }
+    .paradise__image:nth-child(1)::after, .paradise__image:nth-child(3)::after {
+        background: none;
     }
     .reasons__list {
         justify-content: center;
