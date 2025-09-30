@@ -14,9 +14,9 @@ headerLink.forEach(link => {
 
 new Swiper('.content__intro', {
     allowTouchMove: false,
-    // autoplay: {
-    //     delay: 10000
-    // },
+    autoplay: {
+        delay: 10000
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -40,3 +40,21 @@ new Swiper('.intro__popular', {
     }
   }
 });
+
+const cityDesc = document.querySelector(".location__info");
+const mapBtn = document.querySelectorAll(".location__map--button");
+const cityName = document.querySelector(".location__city--name");
+
+mapBtn.forEach(city => {
+    city.addEventListener("click", () => {
+        if (city.classList.contains("location__larnaka")) {
+            cityName.textContent = "Larnaka";
+            cityDesc.style.opacity = 1;
+        } else if (city.classList.contains("location__nicosia")) {
+            cityName.textContent = "Nicosia";
+            cityDesc.style.opacity = 1;
+        } else {
+            cityDesc.style.opacity = 0;
+        }
+    })
+})

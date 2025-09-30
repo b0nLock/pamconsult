@@ -434,7 +434,9 @@ body {
     justify-content: space-between;
     align-items: center;
     color: #434364;
+    overflow: hidden;
 }
+
 
 .location__action--title {
     color: #6D31D0;
@@ -532,6 +534,56 @@ body {
     position: absolute;
 }
 
+.location__unused1 {
+    background: url("../images/n2cyprusmap2.png") no-repeat;
+    background-size: auto;
+    padding: 30px 120px;
+    background-position: left;
+    margin: auto;
+    left: 193px;
+    top: 112px;
+}
+
+.location__unused2 {
+    background: url("../images/scyprusmap2.png") no-repeat;
+    background-size: auto;
+    padding: 140px 160px;
+    background-position: top right;
+    margin: auto;
+    right: 4px;
+    top: 3px;
+}
+
+.location__info {
+    color: #434364;
+    text-align: center;
+    width: 480px;
+    opacity: 0;
+}
+
+.location__images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 13px;
+}
+
+.location__city {
+    margin: 0 50px;
+}
+
+.location__city--name {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.location__city--text {
+    font-weight: 500;
+    padding-top: 10px;
+    letter-spacing: 0.5px;
+}
+
 
 @media (max-width: 1280px) {
     .container {
@@ -584,6 +636,17 @@ body {
     .reasons__info {
         width: 70%;
     }
+    .location__action--subtitle {
+        font-size: 16px;
+    }
+    .location__action--subtitle::before {
+        content: 'Tap on';
+    }
+    .location__list {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 
@@ -630,6 +693,9 @@ body {
     }
     .reasons__info {
         width: 70%;
+    }
+    .location__map {
+        scale: 0.7;
     }
 }
 
@@ -680,6 +746,14 @@ body {
     .reasons__card--title {
         padding-top: 24px;
     }
+    .content__location .container {
+        margin: 0px;
+    }
+    .location__desc {
+        width: 60%;
+        margin: auto;
+    }
+    
 }
 
 
