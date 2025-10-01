@@ -383,31 +383,31 @@ body {
 }
 
 
-.content__reasons {
+.content__reasons, .content__explains {
     background: #FDBFA3;
     background: linear-gradient(180deg, #FEFC9E 0%, #FDBFA3 79%);
     padding: 80px 0;
 }
 
-.content__reasons:last-of-type .reasons__card--title {
+.explains__card--title {
     height: 40px;
 }
 
-.reasons__info {
+.reasons__info, .explains__info {
     text-align: center;
     color: #434364;
     width: 50%;
     margin: auto;
 }
 
-.reasons__info--title {
+.reasons__info--title, .explains__info--title {
     font-size: 36px;
     font-weight: 600;
     padding-bottom: 20px;
     text-transform: uppercase;
 }
 
-.reasons__list {
+.reasons__list, .explains__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -416,9 +416,68 @@ body {
     padding-top: 60px;
 }
 
-.reasons__card {
+.reasons__card, .explains__card {
     text-align: center;
     width: 280px;
+}
+
+.reasons__icon {
+    height: 150px;
+    border-radius: 800px;
+    background-color: red;
+    width: 150px;
+    margin: auto; 
+    align-content: center;
+}
+
+.explains__icon {
+    height: 120px;
+    border-radius: 800px;
+    background-color: red;
+    width: 120px;
+    margin: auto; 
+    align-content: center;
+}
+
+.reasons__card:nth-child(1) .reasons__icon {
+    background: linear-gradient(180deg, #828CDE 0%,
+        #6D31D0 100%);
+}
+
+.reasons__card:nth-child(2) .reasons__icon {
+    background: linear-gradient(45deg, #FE6F2D 0%,
+        #FFD059 100%);
+}
+
+.reasons__card:nth-child(3) .reasons__icon {
+    background: linear-gradient(45deg, #828CDE 0%,
+        #00B8C3 63%);
+}
+
+.reasons__card:nth-child(4) .reasons__icon {
+    background: linear-gradient(135deg, rgba(255, 186, 175, 0.3) 0%,
+        #A651FB 100%);
+}
+
+
+.explains__card:nth-child(1) .explains__icon {
+    background: linear-gradient(45deg, #828CDE 0%,
+        #00B8C3 63%);
+}
+
+.explains__card:nth-child(2) .explains__icon {
+    background: linear-gradient(45deg, #FE6F2D 0%,
+        #FFD059 100%);
+}
+
+.explains__card:nth-child(3) .explains__icon {
+    background: linear-gradient(135deg, #2EA3F2 0%,
+        #A651FB 100%);
+}
+
+.explains__card:nth-child(4) .explains__icon {
+    background: linear-gradient(135deg, rgba(255, 186, 175, 0.3) 0%,
+        #A651FB 100%);
 }
 
 .reasons__card--title {
@@ -427,9 +486,15 @@ body {
     font-size: 20px;
     padding-top: 34px;
     padding-bottom: 4px;
+    letter-spacing: 0.5px;
 }
 
-.reasons__card--title {
+.explains__card--title {
+    color: #6D31D0;
+    font-weight: 600;
+    font-size: 20px;
+    padding-top: 24px;
+    padding-bottom: 4px;
     letter-spacing: 0.5px;
 }
 
