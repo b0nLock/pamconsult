@@ -59,6 +59,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 20px;
+    width: max-content;
 }
 
 .header__burger {
@@ -99,6 +100,7 @@ body {
 
 .content__intro {
     height: 102vh;
+    position: relative;
 }
 
 .intro__slide {
@@ -282,6 +284,104 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
 }
+
+.content__description {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__services {
+    background: linear-gradient(180deg, #828CDE 0%,
+        #6D31D0 100%);
+    padding: 80px 0;
+}
+
+.services__title {
+    font-size: 36px;
+    font-weight: 600;
+    padding: 0 40px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: #FDBFA3 4px solid;
+    width: max-content;
+    margin: auto;
+}
+
+.services__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.services__card {
+    width: 380px;
+    /* height: 515px; */
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services__card--image {
+    height: 260px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom-right-radius: 19px;
+}
+
+.services__card:nth-child(1) .services__card--image {
+    background: url("../images/family.jpg") no-repeat;
+    background-position: center;
+    background-size: 300%;
+}
+
+.services__card:nth-child(2) .services__card--image {
+    background: url("../images/business.jpg") no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.services__card:nth-child(3) .services__card--image {
+    background: url("../images/investment.jpg") no-repeat;
+    background-position: center;
+    background-size: 103%;
+}
+
+.services__card--info {
+    padding: 20px 0;
+    gap: 20px;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    color: #434364;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services__card--title {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 80%;
+    margin: auto;
+}
+
+.services__card--text {
+    letter-spacing: 0.5px;
+}
+
+
 
 .popular__list {
     padding: 16px 0;
@@ -791,16 +891,19 @@ body {
         background: linear-gradient(180deg,#8EA1BD 0%,
         #8ea1bd00 53%);
     }
+    .services__list {
+        justify-content: center;
+    }
     .paradise__info {
         padding: 0 20px;
     }
     .paradise__image:nth-child(1)::after, .paradise__image:nth-child(3)::after {
         background: none;
     }
-    .reasons__list {
+    .reasons__list, .explains__list {
         justify-content: center;
     }
-    .reasons__info {
+    .reasons__info, .explains__info {
         width: 70%;
     }
     .location__action--subtitle {
@@ -855,6 +958,20 @@ body {
         padding: 0;
         gap: 40px;
     }
+    .content__services {
+        padding: 60px 0;
+    }
+    .services__list {
+        padding-top: 40px;
+    }
+    .services__card {
+        width: 100%;
+    }
+    .services__card:nth-child(1) .services__card--image {
+        background: url("../images/family.jpg") no-repeat;
+        background-position: center;
+        background-size: 200%;
+    }
     .paradise__image {
         position: relative;
         width: 100%;
@@ -867,7 +984,7 @@ body {
         margin: 0;
         padding: 0;
     }
-    .reasons__info {
+    .reasons__info, .explains__info {
         width: 70%;
     }
     .location__desc {
@@ -911,6 +1028,9 @@ body {
     .header__try {
         display: none;
     }
+    .content__description {
+        flex-direction: column-reverse;
+    }
     .intro__description {
         padding-top: 40px;
         align-items: center;
@@ -931,7 +1051,7 @@ body {
     }
     .swiper-pagination {
         right: 0 !important;
-        bottom: -100px !important;
+        bottom: 25px !important;
     }
     .swiper-pagination-bullet {
         margin: 0 10px !important;
@@ -939,16 +1059,16 @@ body {
     .paradise__info {
         width: 90%;
     }
-    .reasons__info {
+    .reasons__info, .explains__info {
         width: 100%;
     }
     .reasons__icon img {
         width: 100px;
     }
-    .reasons__card {
+    .reasons__card, .explains__card {
         width: 160px;
     }
-    .reasons__card--title {
+    .reasons__card--title, .explains__card--title {
         padding-top: 24px;
     }
     .content__location .container {
