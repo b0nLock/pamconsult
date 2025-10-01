@@ -922,7 +922,6 @@ body {
 
 .contact__fields {
     padding-top: 20px;
-    padding-bottom: 32px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -943,6 +942,7 @@ body {
     width: 100%;
     height: 200px;
     padding: 12px 22px;
+    resize: none;
 }
 
 .contact__field::placeholder, .contact__bigfield::placeholder {
@@ -951,21 +951,27 @@ body {
 
 .contact__agreement {
     display: flex;
+    align-items: center;
     gap: 24px;
     width: 100%;
 }
 
 .contact__checkbox {
-    width: 32px;
+    min-width: 32px;
     height: 32px;
+    appearance: none;
     border: white 1px solid;
     border-radius: 4px;
-    accent-color: blue;
+    position: relative;
 }
 
-.contact__checkbox::after {
-    content: '';
-    background-color: red;
+.contact__checkbox:checked::after {
+    content: '\2714';
+    color: lime;
+    font-size: 22px;
+    position: absolute;
+    right: 25%;
+    top: 0;
 }
 
 .contact__text, .contact__text--highlight {
@@ -977,8 +983,10 @@ body {
     border-bottom: #6D31D0 1px solid;
 }
 
-.contact__sumbit {
-    align-content: center;
+.contact__form--button {
+    padding-top: 22px;
+    margin: auto;
+    display: block;
 }
 
 
@@ -1149,6 +1157,9 @@ body {
     .authors__card {
         align-self: center;
     }
+    .contact__fields {
+        width: 100%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1249,6 +1260,12 @@ body {
     }
     .content__contact {
         padding: 60px 0;
+    }
+    .contact__form {
+        width: auto;
+    }
+    .contact__field {
+        width: 100%;
     }
 }
 
