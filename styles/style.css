@@ -1120,13 +1120,9 @@ body {
 
 .footer {
     background-color: #828CDE;
-    padding: 40px 0;
+    padding: 40px 10px;
     color: white;
     letter-spacing: 0.5px;
-}
-
-.footer .container {
-    margin: 0 50px;
 }
 
 .footer__menu {
@@ -1471,17 +1467,22 @@ body {
     .contact__field {
         width: 100%;
     }
-    .content__questions .container {
-        margin: 0 40px;
-    }
     .questions__card {
-        width: 360px !important;
+        width: 300px !important;
     }
     .content__questions .swiper-pagination-bullet {
         margin: 0 7px !important;
     }
+    .content__questions .container {
+        margin: 0 10px;
+    }
     .questions__list {
-        width: 360px;
+        width: 300px;
+    }
+    .footer {
+        width: 100%;
+        margin: auto;
+        padding: 0;
     }
     .footer__info {
         flex-direction: column;
