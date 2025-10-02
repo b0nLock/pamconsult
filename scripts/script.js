@@ -47,7 +47,7 @@ new Swiper('.questions__list', {
         clickable: true,
     },
     breakpoints: {
-    1280: {
+    1440: {
         slidesPerView: 3,
         spaceBetween: 20
     },
