@@ -14,11 +14,11 @@ headerLink.forEach(link => {
 
 new Swiper('.content__intro', {
     allowTouchMove: false,
-    // autoplay: {
-    //     delay: 10000
-    // },
+    autoplay: {
+        delay: 10000
+    },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.intro__pagination',
         clickable: true,
     },
     breakpoints: {
@@ -40,6 +40,31 @@ new Swiper('.intro__popular', {
     }
   }
 });
+
+new Swiper('.questions__list', {
+    pagination: {
+        el: '.questions__pagination',
+        clickable: true,
+    },
+    breakpoints: {
+    1280: {
+        slidesPerView: 3,
+        spaceBetween: 20
+    },
+    1000: {
+        slidesPerView: 2,
+        spaceBetween: 20
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 4,
+    },
+    380: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+    },
+  }
+})
 
 const cityDesc = document.querySelector(".location__info");
 const mapBtn = document.querySelectorAll(".location__map--button");
