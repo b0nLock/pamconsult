@@ -1165,7 +1165,7 @@ body {
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
     .questions__list {
         width: 780px;
     }
